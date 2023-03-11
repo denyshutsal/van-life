@@ -1,0 +1,97 @@
+$base-color: #161616;
+$base-bg-color: #fff7ed;
+
+$van-type-color: #ffead0;
+$simple-type-bg-color: #e17654;
+$luxury-type-bg-color: #161616;
+$rugged-type-bg-color: #115e59;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 320px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: $base-color;
+  background-color: $base-bg-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  &--header {
+    justify-content: space-between;
+  }
+
+  &--home {
+    position: relative;
+    flex-direction: column;
+    max-width: 550px;
+  }
+
+  &--about {
+    position: relative;
+    flex-direction: column;
+    max-width: 550px;
+  }
+
+  &--vans {
+    flex-direction: column;
+    max-width: 565px;
+
+    @media only screen and (min-width: 830px) {
+      max-width: 850px;
+    }
+  }
+
+  &--van-details {
+    flex-direction: column;
+    max-width: 547px;
+  }
+}
+
+.van-type {
+  display: inline-block;
+  min-width: 86px;
+  padding: 5px 10px 6px;
+  font-weight: 600;
+  color: $van-type-color;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: capitalize;
+
+  &--simple {
+    background-color: $simple-type-bg-color;
+  }
+
+  &--luxury {
+    background-color: $luxury-type-bg-color;
+  }
+
+  &--rugged {
+    background-color: $rugged-type-bg-color;
+  }
+}
