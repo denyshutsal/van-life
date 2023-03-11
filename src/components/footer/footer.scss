@@ -1,0 +1,14 @@
+$site-footer-bg-color: #252525;
+$site-footer-color: #aaa;
+
+.site-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 75px;
+  color: $site-footer-color;
+  background-color: $site-footer-bg-color;
+  font-size: 14px;
+  line-height: 1.64;
+}
