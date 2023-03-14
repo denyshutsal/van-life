@@ -1,0 +1,39 @@
+$host-nav-link-color: #4d4d4d;
+$host-nav-link-hover-focus-color: #161616;
+
+.host-nav {
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    @media only screen and (min-width: 425px) {
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.44;
+    color: $host-nav-link-color;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $host-nav-link-hover-focus-color;
+      text-decoration: underline;
+    }
+  }
+}
