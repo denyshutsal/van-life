@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import "./HostLayout.scss";
 
@@ -9,19 +9,41 @@ export default function HostLayout() {
       <nav className="host-nav">
         <ul className="host-nav__list">
           <li className="host-nav__item">
-            <Link to="/host" className="host-nav__link">
+            <NavLink
+              to="/host"
+              end
+              className={({ isActive }) =>
+                isActive
+                  ? "host-nav__link host-nav__link--active"
+                  : "host-nav__link"
+              }
+            >
               Dashboard
-            </Link>
+            </NavLink>
           </li>
           <li className="host-nav__item">
-            <Link to="/host/income" className="host-nav__link">
+            <NavLink
+              to="/host/income"
+              className={({ isActive }) =>
+                isActive
+                  ? "host-nav__link host-nav__link--active"
+                  : "host-nav__link"
+              }
+            >
               Income
-            </Link>
+            </NavLink>
           </li>
           <li className="host-nav__item">
-            <Link to="/host/reviews" className="host-nav__link">
+            <NavLink
+              to="/host/reviews"
+              className={({ isActive }) =>
+                isActive
+                  ? "host-nav__link host-nav__link--active"
+                  : "host-nav__link"
+              }
+            >
               Reviews
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -30,8 +30,11 @@ $host-nav-link-hover-focus-color: #161616;
     text-transform: capitalize;
 
     &:hover,
-    &:focus,
-    &:active {
+    &:focus {
+      color: $host-nav-link-hover-focus-color;
+    }
+
+    &--active {
       color: $host-nav-link-hover-focus-color;
       text-decoration: underline;
     }
