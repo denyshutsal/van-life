@@ -10,6 +10,8 @@ import VanDetail from "./pages/van-detail/VanDetail";
 import Dashboard from "./pages/host/dashboard/Dashboard";
 import Income from "./pages/host/income/Income";
 import Reviews from "./pages/host/reviews/Reviews";
+import HostVans from "./pages/host/host-vans/HostVans";
+import HostVanDetail from "./pages/host/host-van-detail/HostVanDetail";
 import "./server";
 import "./normalize.css";
 import "./index.scss";
@@ -30,6 +32,8 @@ root.render(
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
             <Route path="reviews" element={<Reviews />} />
+            <Route path="vans" element={<HostVans />} />
+            <Route path="vans/:id" element={<HostVanDetail />} />
           </Route>
         </Route>
       </Routes>

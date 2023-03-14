@@ -5,7 +5,7 @@ import "./HostLayout.scss";
 
 export default function HostLayout() {
   return (
-    <>
+    <div className="container container--host">
       <nav className="host-nav">
         <ul className="host-nav__list">
           <li className="host-nav__item">
@@ -35,6 +35,18 @@ export default function HostLayout() {
           </li>
           <li className="host-nav__item">
             <NavLink
+              to="/host/vans"
+              className={({ isActive }) =>
+                isActive
+                  ? "host-nav__link host-nav__link--active"
+                  : "host-nav__link"
+              }
+            >
+              Vans
+            </NavLink>
+          </li>
+          <li className="host-nav__item">
+            <NavLink
               to="/host/reviews"
               className={({ isActive }) =>
                 isActive
@@ -48,6 +60,6 @@ export default function HostLayout() {
         </ul>
       </nav>
       <Outlet />
-    </>
+    </div>
   );
 }
