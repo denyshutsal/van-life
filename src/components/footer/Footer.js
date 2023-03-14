@@ -13,6 +13,8 @@ export default function Footer() {
   });
 
   return (
-    <footer className="site-footer">Ⓒ {date.getFullYear()} #VANLIFE</footer>
+    <footer className="site-footer">
+      &#169; {date.getFullYear()} #VANLIFE
+    </footer>
   );
 }
