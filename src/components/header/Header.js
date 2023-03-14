@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./header.scss";
 
 export default function Header() {
@@ -12,14 +12,40 @@ export default function Header() {
         <nav className="site-nav">
           <ul className="site-nav__list">
             <li className="site-nav__item">
-              <Link to="/about" className="site-nav__link">
-                About
-              </Link>
+              <NavLink
+                to="/host"
+                className={({ isActive }) =>
+                  isActive
+                    ? "site-nav__link site-nav__link--active"
+                    : "site-nav__link"
+                }
+              >
+                Host
+              </NavLink>
             </li>
             <li className="site-nav__item">
-              <Link to="/vans" className="site-nav__link">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive
+                    ? "site-nav__link site-nav__link--active"
+                    : "site-nav__link"
+                }
+              >
+                About
+              </NavLink>
+            </li>
+            <li className="site-nav__item">
+              <NavLink
+                to="/vans"
+                className={({ isActive }) =>
+                  isActive
+                    ? "site-nav__link site-nav__link--active"
+                    : "site-nav__link"
+                }
+              >
                 Vans
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>

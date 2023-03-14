@@ -50,8 +50,11 @@ $site-nav-link-hover-focus-color: #161616;
     text-transform: capitalize;
 
     &:hover,
-    &:focus,
-    &:active {
+    &:focus {
+      color: $site-nav-link-hover-focus-color;
+    }
+
+    &--active {
       color: $site-nav-link-hover-focus-color;
       text-decoration: underline;
     }
