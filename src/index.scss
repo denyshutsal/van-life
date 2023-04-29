@@ -80,7 +80,6 @@ html {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 40px;
   }
 }
 
@@ -104,5 +103,16 @@ html {
 
   &--rugged {
     background-color: $rugged-type-bg-color;
+  }
+
+  &--small {
+    min-width: 70px;
+    padding: 3px 5px 4px;
+    border-radius: 3px;
+    font-size: 13px;
+
+    @media only screen and (min-width: 425px) {
+      margin-top: 25px;
+    }
   }
 }
