@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LoadingBox from "../../../components/loading-box/LoadingBox";
+import LoadingBox from "../../../components/LoadingBox/LoadingBox";
 import "./HostVans.scss";
 
 export default function HostVans() {
@@ -12,7 +12,7 @@ export default function HostVans() {
       .then((data) => setVans(data.vans));
   }, []);
 
-  const hostVansElement = vans.map((item) => (
+  const hostVansElements = vans.map((item) => (
     <li key={item.id} className="host-van host-vans__item">
       <Link to={`/host/vans/${item.id}`} className="host-van__link">
         <img
@@ -35,7 +35,7 @@ export default function HostVans() {
       {vans.length !== 0 ? (
         <section className="host-vans">
           <h1 className="host-vans__title">Your listed vans</h1>
-          <ul className="host-vans__list">{hostVansElement}</ul>
+          <ul className="host-vans__list">{hostVansElements}</ul>
         </section>
       ) : (
         <LoadingBox />

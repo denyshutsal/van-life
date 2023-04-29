@@ -1,5 +1,5 @@
 import React from "react";
-import "./loadingBox.scss";
+import "./LoadingBox.scss";
 
 export default function LoadingBox() {
   return (

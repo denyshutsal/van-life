@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LoadingBox from "../../components/loading-box/LoadingBox";
-import "./vans.scss";
+import LoadingBox from "../../components/LoadingBox/LoadingBox";
+import "./Vans.scss";
 
 export default function Vans() {
   const [vans, setVans] = React.useState([]);

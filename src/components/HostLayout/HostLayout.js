@@ -10,7 +10,7 @@ export default function HostLayout() {
         <ul className="host-nav__list">
           <li className="host-nav__item">
             <NavLink
-              to="/host"
+              to="."
               end
               className={({ isActive }) =>
                 isActive
@@ -23,7 +23,7 @@ export default function HostLayout() {
           </li>
           <li className="host-nav__item">
             <NavLink
-              to="/host/income"
+              to="income"
               className={({ isActive }) =>
                 isActive
                   ? "host-nav__link host-nav__link--active"
@@ -35,7 +35,7 @@ export default function HostLayout() {
           </li>
           <li className="host-nav__item">
             <NavLink
-              to="/host/vans"
+              to="vans"
               className={({ isActive }) =>
                 isActive
                   ? "host-nav__link host-nav__link--active"
@@ -47,7 +47,7 @@ export default function HostLayout() {
           </li>
           <li className="host-nav__item">
             <NavLink
-              to="/host/reviews"
+              to="reviews"
               className={({ isActive }) =>
                 isActive
                   ? "host-nav__link host-nav__link--active"
