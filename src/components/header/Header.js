@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import "./header.scss";
+import "./Header.scss";
 
 export default function Header() {
   return (
@@ -13,7 +13,7 @@ export default function Header() {
           <ul className="site-nav__list">
             <li className="site-nav__item">
               <NavLink
-                to="/host"
+                to="host"
                 className={({ isActive }) =>
                   isActive
                     ? "site-nav__link site-nav__link--active"
@@ -25,7 +25,7 @@ export default function Header() {
             </li>
             <li className="site-nav__item">
               <NavLink
-                to="/about"
+                to="about"
                 className={({ isActive }) =>
                   isActive
                     ? "site-nav__link site-nav__link--active"
@@ -37,7 +37,7 @@ export default function Header() {
             </li>
             <li className="site-nav__item">
               <NavLink
-                to="/vans"
+                to="vans"
                 className={({ isActive }) =>
                   isActive
                     ? "site-nav__link site-nav__link--active"
