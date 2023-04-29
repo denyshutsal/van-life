@@ -1,0 +1,21 @@
+.host-van-pricing {
+  &__price {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+
+    @media only screen and (min-width: 425px) {
+      font-size: 18px;
+    }
+  }
+
+  &__period {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+
+    @media only screen and (min-width: 425px) {
+      font-size: 16px;
+    }
+  }
+}
