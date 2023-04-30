@@ -1,6 +1,5 @@
 {
   "name": "van-life",
-  "homepage": "https://denyshutsal.github.io/van-life",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,8 +17,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,7 +41,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0",
     "miragejs": "^0.1.47"
   }
 }
