@@ -1,17 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import LoadingBox from "../../components/LoadingBox/LoadingBox";
 import "./Vans.scss";
 
 export default function Vans() {
+  const [searchParams] = useSearchParams();
   const [vans, setVans] = React.useState([]);
+
+  const typeFilter = searchParams.get("type");
+
   React.useEffect(() => {
     fetch("/api/vans")
       .then((res) => res.json())
       .then((data) => setVans(data.vans));
   }, []);
 
-  const vansElement = vans.map((item) => (
+  const displayedVans = typeFilter
+    ? vans.filter((van) => van.type === typeFilter)
+    : vans;
+
+  const vansElement = displayedVans.map((item) => (
     <li key={item.id} className="van vans__item">
       <Link to={item.id} className="van__link">
         <img
@@ -43,6 +51,46 @@ export default function Vans() {
         <section className="vans">
           <div className="container container--vans">
             <h1 className="vans__title">Explore our van options</h1>
+            <div className="vans__list-filter-buttons">
+              <Link
+                to="?type=simple"
+                className={`vans__filter-link vans__filter-link--simple ${
+                  typeFilter === "simple"
+                    ? "vans__filter-link--simple-selected"
+                    : ""
+                }`}
+              >
+                Simple
+              </Link>
+              <Link
+                to="?type=luxury"
+                className={`vans__filter-link vans__filter-link--luxury ${
+                  typeFilter === "luxury"
+                    ? "vans__filter-link--luxury-selected"
+                    : ""
+                }`}
+              >
+                Luxury
+              </Link>
+              <Link
+                to="?type=rugged"
+                className={`vans__filter-link vans__filter-link--rugged ${
+                  typeFilter === "rugged"
+                    ? "vans__filter-link--rugged-selected"
+                    : ""
+                }`}
+              >
+                Rugged
+              </Link>
+              {typeFilter ? (
+                <Link
+                  to="."
+                  className="vans__filter-link vans__filter-link--clear-filters"
+                >
+                  Clear filter
+                </Link>
+              ) : null}
+            </div>
             <ul className="vans__list">{vansElement}</ul>
           </div>
         </section>

@@ -14,6 +14,48 @@
     line-height: 1.3;
   }
 
+  &__list-filter-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 55.7px;
+  }
+
+  &__filter-link {
+    display: inline-block;
+    min-width: 104px;
+    padding: 6px 10px 7px;
+    font-weight: 500;
+    color: #4d4d4d;
+    background-color: #ffead0;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+
+    &--simple-selected {
+      background-color: #e17654;
+      color: #ffead0;
+    }
+
+    &--luxury-selected {
+      background-color: #161616;
+      color: #ffead0;
+    }
+
+    &--rugged-selected {
+      background-color: #115e59;
+      color: #ffead0;
+    }
+
+    &--clear-filters {
+      text-decoration: underline;
+      background-color: transparent;
+    }
+  }
+
   &__list {
     width: 100%;
     display: grid;
