@@ -21,7 +21,11 @@ export default function Vans() {
 
   const vansElement = displayedVans.map((item) => (
     <li key={item.id} className="van vans__item">
-      <Link to={item.id} className="van__link">
+      <Link
+        to={item.id}
+        className="van__link"
+        state={{ search: searchParams.toString(), type: typeFilter }} // to be able to return to the list with useLocation without resetting the filters
+      >
         <img
           src={item.imageUrl}
           className="van__img"

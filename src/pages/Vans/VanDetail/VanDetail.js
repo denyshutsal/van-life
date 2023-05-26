@@ -1,11 +1,12 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import BackLink from "../../../components/BackLink/BackLink";
 import LoadingBox from "../../../components/LoadingBox/LoadingBox";
 import "./VanDetail.scss";
 
 export default function VanDetail() {
   const params = useParams();
+  const location = useLocation();
   const [van, setVan] = React.useState([]);
   React.useEffect(() => {
     fetch(`/api/vans/${params.id}`)
@@ -19,7 +20,10 @@ export default function VanDetail() {
         <>
           <article className="van-details">
             <div className="container container--van-details">
-              <BackLink text={"Back to all vans"} />
+              <BackLink
+                path={`..?${location.state.search || ""}`}
+                text={`Back to ${location.state.type || "all"} vans`}
+              />
               <img
                 src={van.imageUrl}
                 className="van-details__img"
