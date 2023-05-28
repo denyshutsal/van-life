@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Page404 from "./pages/Page404/Page404";
 import Layout from "./components/Layout/Layout";
 import HostLayout from "./components/HostLayout/HostLayout";
 import Home from "./pages/Home/Home";
@@ -42,6 +43,7 @@ root.render(
               <Route path="photos" element={<HostVanPhotos />} />
             </Route>
           </Route>
+          <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>
     </BrowserRouter>

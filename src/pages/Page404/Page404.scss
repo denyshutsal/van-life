@@ -1,0 +1,15 @@
+.page404 {
+  text-align: center;
+  padding: 25px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 24px;
+      color: inherit;
+    }
+  }
+}
